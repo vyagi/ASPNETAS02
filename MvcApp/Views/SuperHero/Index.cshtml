@@ -1,0 +1,13 @@
+﻿@model List<SuperHero>
+
+
+<h3>Superheroes available</h3>
+<ul>
+    @foreach (var hero in Model)
+    {
+        <li><a asp-controller="SuperHero" asp-action="Details" asp-route-id="@hero.Id">
+            @hero.Name
+        </a></li>
+    }
+</ul>
+<a asp-controller="SuperHero" asp-action="Add">New hero</a>
